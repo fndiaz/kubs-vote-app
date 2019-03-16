@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-vote-postgres
+  labels:
+    name: service-vote-postgres
+
+spec:
+  ports:
+    - targetPort: 5432
+      port: 5432
+  selector:
+    app: vote-postgres
