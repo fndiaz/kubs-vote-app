@@ -17,8 +17,6 @@ spec:
       containers:
         - name: vote-worker
           image: dockersamples/examplevotingapp_worker
-          ports:
-            - containerPort: 80
   replicas: 2
   selector:
     matchLabels:
