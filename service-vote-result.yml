@@ -10,6 +10,6 @@ spec:
   ports:
     - targetPort: 80
       port: 80
-      nodePort: 3003
+      nodePort: 30003
   selector:
     app: vote-result
