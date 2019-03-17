@@ -4,7 +4,7 @@ metadata:
   name: deploy-vote-worker
   labels:
     name: deploy-vote-worker
-    type: worker
+    type: app-worker
 
 spec:
   template:
@@ -17,7 +17,7 @@ spec:
       containers:
         - name: vote-worker
           image: dockersamples/examplevotingapp_worker
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: vote-worker

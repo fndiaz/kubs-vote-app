@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   name: deploy-vote-redis
   labels:
-    name: deploy-vote-redis
+    name: redis
     type: redis
 
 spec:
   template:
     metadata:
-      name: vote-redis
+      name: redis
       labels:
-        app: vote-redis
+        app: redis
         type: redis
     spec:
       containers:
@@ -19,7 +19,7 @@ spec:
           image: redis
           ports:
             - containerPort: 6379
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: vote-redis
+      app: redis
